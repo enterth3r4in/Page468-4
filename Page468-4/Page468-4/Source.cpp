@@ -26,6 +26,14 @@ public:
 		color = vehicleColor;
 	}
 
+	void displayCarInfo()
+	{
+		cout << "The VIN (Vehicle Identification Number) is: " << VIN << endl;
+		cout << "The MAKE of the vehicle is: " << make << endl;
+		cout << "The MODEL of the vehicle is: " << model << endl;
+		cout << "The COLOR of the vehicle is: " << color << endl;
+	}
+
 	//Set VIN for private member variable
 	void setVIN(string vehicleID)
 	{
@@ -67,9 +75,11 @@ int main()
 {
 	//Instance of automobile class
 	automobile myVehicle("YA1029LL110", "Nissan", "Altima", "Silver");
-	cout << myVehicle.getVIN() << endl;
-	myVehicle.setVIN("NN18842DZ919");
-	cout << myVehicle.getVIN() << endl;
+
+	myVehicle.displayCarInfo();
+	//cout << myVehicle.getVIN() << endl << myVehicle.getColor() << " " << myVehicle.getMake() << " " << myVehicle.getModel() << endl;
+	//myVehicle.setVIN("NN18842DZ919");
+	//cout << myVehicle.getVIN() << endl;
 
 	//Keeps console window open
 	system("PAUSE");
