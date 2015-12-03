@@ -31,6 +31,18 @@ public:
 	{
 		VIN = vehicleID;
 	}
+	void setMake(string vehicleMake)
+	{
+		make = vehicleMake;
+	}
+	void setModel(string vehicleModel)
+	{
+		model = vehicleModel;
+	}
+	void setColor(string vehicleColor)
+	{
+		color = vehicleColor;
+	}
 
 	//Getters for private member variables
 	string getVIN()
@@ -55,6 +67,8 @@ int main()
 {
 	//Instance of automobile class
 	automobile myVehicle("YA1029LL110", "Nissan", "Altima", "Silver");
+	cout << myVehicle.getVIN() << endl;
+	myVehicle.setVIN("NN18842DZ919");
 	cout << myVehicle.getVIN() << endl;
 
 	//Keeps console window open
