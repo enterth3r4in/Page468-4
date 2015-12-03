@@ -34,6 +34,14 @@ public:
 		cout << "The COLOR of the vehicle is: " << color << endl;
 	}
 
+	string returnString()
+	{
+		return "The VIN (Vehicle Identification Number) is: " + VIN +
+			"\nThe MAKE of the vehicle is: " + make +
+			"\nThe MODEL of the vehicle is: " + model + 
+			"\nThe COLOR of the vehicle is: " + color;
+	}
+
 	//Set VIN for private member variable
 	void setVIN(string vehicleID)
 	{
@@ -77,6 +85,9 @@ int main()
 	automobile myVehicle("YA1029LL110", "Nissan", "Altima", "Silver");
 
 	myVehicle.displayCarInfo();
+	cout << endl << endl;
+	cout << myVehicle.returnString();
+	cout << endl; 
 	//cout << myVehicle.getVIN() << endl << myVehicle.getColor() << " " << myVehicle.getMake() << " " << myVehicle.getModel() << endl;
 	//myVehicle.setVIN("NN18842DZ919");
 	//cout << myVehicle.getVIN() << endl;
